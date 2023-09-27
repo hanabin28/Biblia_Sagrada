@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --brown: #572222;
+    --yellow: #FCF8E3;
+    --font: 'Atma', cursive;
+    --font2:'Kaushan Script', cursive;;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+header{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conteudo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 64px;
+    font-size: 1.6rem;
+    font-family: var(--font2);
+
+}
+
+main{
+    height: 86vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.container{
+    width: 100%;
+}
+
+.container span{
+    width: 500px;
+    height: 500px;
+    background-color: #572222;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
+}
