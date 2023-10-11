@@ -18,6 +18,11 @@ body{
     grid-template-rows: 20% 70% 10%;
 }
 
+body.change{
+    opacity: 0.3;
+    transition: .4s all ease-in-out;
+}
+
 
 
 header{
@@ -57,10 +62,12 @@ header{
     transform: translateX(140%);
     transition: all .3s ease;
     box-shadow: rgb(124, 124, 124) -4px 0 4px 0px;
+    opacity: 1;
 }
 
 .menu.active{
     transform: translateX(0);
+    opacity: 1;
 }
 
 .menu ul li{
@@ -145,6 +152,7 @@ textarea{
     align-items: center;
     justify-content: center;
     font-family: var(--font);
+    font-size: 1.2rem;
 }
 
 textarea:focus{
