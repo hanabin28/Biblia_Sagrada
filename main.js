@@ -48,11 +48,18 @@ buttonRandomVerse.addEventListener('click', showRandomVerse)
 const inputPesquisar = document.getElementById('pesquisar')
 
 const getBooks = async function(books){
-    const url = `https://www.abibliadigital.com.br/api/${books}/`
+    const url = `https://www.abibliadigital.com.br/api/books/${books}`
     const response = await fetch(url)
     const returnBook = await response.json()
     console.log(returnBook)
     return returnBook
 }
 
-inputPesquisar.addEventListener('click', getBooks)
+const showBooks = async function(){
+    const showBooks = document.getElementById('aparecer-versiculo')
+    const books = await getBooks(inputPesquisar.value)
+
+    showBooks.value = `Livro: ${books.name},  ${books.abbrev.pt}\nAutor: ${books.author}\nCapítulos: ${books.chapters}\n${books.testament}\nGrupo: ${books.group}\n${books.comment}`
+}
+
+inputPesquisar.addEventListener('blur', showBooks)
