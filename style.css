@@ -159,6 +159,15 @@ textarea:focus{
     outline: none;
 }
 
+textarea::-webkit-scrollbar{
+    width: 10px;
+    height: 15px;
+    background-color: var(--yellow);
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background: var(--brown);
+}
 
 
 
