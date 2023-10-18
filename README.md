@@ -3,5 +3,26 @@
 
 # Sobre ✨
 » Projeto desenvolvido na disicplina de Programação Web Front-End (PWFE) no SENAI Jandira, orientado pelo professor Fernando Leonid.                                                                                     
+
 » Este projeto permite que você veja as informações de um livro (autor, nº de capítulos, etc..), busque por um livro, capítulo ou versículo específico, e até gere um versículo aleatório!
 
+
+# Etapas do projeto✨
+
+
+» Escolher API ✔
+
+
+» Selecionar ideias de design ✔
+
+
+» Prototipar (Figma) ✔
+
+
+» Construir HTML e CSS ✔
+
+
+» Inserir API ✔
+
+
+» Responsividade ✔
