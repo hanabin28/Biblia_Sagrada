@@ -1,0 +1,63 @@
+@media (max-width: 767px){
+
+    header{
+        width: 100%;
+        display: flex;
+        font-size: .9rem;
+        padding: 12px 16px 32px;
+        justify-content: stretch;
+        gap: 8%;
+    }
+
+    img{
+        height: 50px;
+        width: 50px;
+    }
+
+    input, button{
+        width: 165px;
+    }
+
+    textarea{
+        width: 80%;
+        height: 60%;
+        font-size: .8rem;
+    }
+
+    input::placeholder{
+        font-size: .8rem;
+    }
+
+    input{
+        height: 100%;
+        padding: 4px 8px;
+    }
+
+    button{
+        font-size: .8rem;
+    }
+
+    footer{
+        font-size: .7rem;
+    }
+
+    .menu{
+        transform: translateX(200%);
+        width: 80%;
+        font-size: 2rem;
+        right: 12px;
+    }
+
+    .sub-menu{
+        font-size: 1.4rem;
+    }
+
+    .open-menu-btn{
+        right: 20px;
+        top: 20px;
+    }
+
+    .container{
+        width: 100%;
+    }
+}

@@ -57,6 +57,7 @@ buttonRandomVerse.addEventListener('click', showRandomVerse)
 
 /** Pesquisa por livro **/
 const inputPesquisar = document.getElementById('pesquisar')
+const inputPesquisarCapitulo = document.getElementById('capitulo')
 
 const getBooks = async function (books) {
     const url = `https://www.abibliadigital.com.br/api/books/${books}`
@@ -82,7 +83,7 @@ inputPesquisar.addEventListener('keypress', (event) => {
 
 /** Pesquisa - livro + capítulo **/
 const getChapter = async function (chapter) {
-    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${getBooks(books)}/${chapter}`
+    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapter}/${chapter}`
     const response = await fetch(url)
     const returnChapter = await response.json()
     console.log(returnChapter)
@@ -92,11 +93,9 @@ const getChapter = async function (chapter) {
 const showChapter = async function () {
     const showChapter = document.getElementById('aparecer-versiculo')
     const chapter = await getChapter(inputPesquisar.value)
-    const books = await showBooks()
 
     showChapter.value = chapter.book.name
-    // showChapter.value = chapter.verses[5].text
 
 }
 
-inputPesquisar.addEventListener('blur', showChapter)
+inputPesquisarCapitulo.addEventListener('blur', showChapter)
