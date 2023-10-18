@@ -29,14 +29,17 @@
             </div>
             <div class="menu" id="menu">
                 <div class="close-menu-btn" id="close-menu-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="40px" height="40px"><path d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40px" height="40px">
+                        <path
+                            d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z" />
+                    </svg>
                 </div>
                 </label>
                 <ul>
                     <li>
-                        <button>
-                            Livros
-                            <svg class="arrow-up" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        <div class="dropdown" id="dropdown">
+                            <span class="main-dropdown-item">Livros</span>
+                            <svg class="arrow" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <rect width="20" height="20" fill="url(#pattern0)" />
                                 <defs>
@@ -47,11 +50,11 @@
                                         xlink:href="data:image/png;base64,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" />
                                 </defs>
                             </svg>
-                        </button>
-
-                        <ul class="dropdown">
-                            <li>Gênesis
-                                <svg class="arrow-up" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                        </div>
+                        <ul class="sub-menu" id="sub-menu">
+                            <li>
+                                <span>Gênesis</span>
+                                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <rect width="15" height="15" fill="url(#pattern0)" />
                                     <defs>
@@ -64,8 +67,9 @@
                                     </defs>
                                 </svg>
                             </li>
-                            <li>Êxodo
-                                <svg class="arrow-up" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            <li>
+                                <span>Êxodo</span>
+                                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <rect width="15" height="15" fill="url(#pattern0)" />
                                     <defs>
@@ -78,8 +82,9 @@
                                     </defs>
                                 </svg>
                             </li>
-                            <li>Levítico
-                                <svg class="arrow-up" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            <li>
+                                <span>Levítico</span>
+                                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <rect width="15" height="15" fill="url(#pattern0)" />
                                     <defs>
@@ -92,8 +97,9 @@
                                     </defs>
                                 </svg>
                             </li>
-                            <li>Números
-                                <svg class="arrow-up" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            <li>
+                                <span>Números</span>
+                                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <rect width="15" height="15" fill="url(#pattern0)" />
                                     <defs>
@@ -106,8 +112,9 @@
                                     </defs>
                                 </svg>
                             </li>
-                            <li>Deuteronômio
-                                <svg class="arrow-up" width="15" height="15" viewBox="0 0 15 15" fill="none"
+                            <li>
+                                <span>Deuteronômio</span>
+                                <svg class="arrow" width="15" height="15" viewBox="0 0 15 15" fill="none"
                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                     <rect width="15" height="15" fill="url(#pattern0)" />
                                     <defs>
@@ -136,8 +143,11 @@
 
                 <input type="text" id="pesquisar" placeholder="Pesquise aqui...">
 
-                <svg class="lupa-pesquisa" width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.4765 0.955772C5.32411 0.955772 0.320526 6.0572 0.320526 12.3164C0.320526 18.6032 5.32411 23.6765 11.4765 23.6765C14.2929 23.6765 16.8633 22.6009 18.832 20.8362L19.4612 21.4706L18.8865 22.077C18.5584 22.4079 18.5584 22.932 18.8865 23.2629L23.8084 28.281C23.9724 28.4465 24.1643 28.5293 24.383 28.5293C24.6018 28.5293 24.8204 28.4465 24.9571 28.281L27.1446 26.0477C27.4454 25.7168 27.4455 25.1931 27.1174 24.8898L22.1955 19.8711C22.0315 19.7057 21.8396 19.6234 21.6209 19.6234C21.4021 19.6234 21.1835 19.7057 21.0468 19.8711L20.4727 20.478L19.8435 19.8162C21.5662 17.8033 22.6329 15.184 22.6329 12.3164C22.6329 6.0572 17.6288 0.955772 11.4765 0.955772ZM11.4765 2.63765C16.7265 2.63765 20.9923 6.99459 20.9923 12.3439C20.9923 17.6931 16.7265 22.0221 11.4765 22.0221C6.22646 22.0221 1.96115 17.6931 1.96115 12.3439C1.96115 6.99459 6.22646 2.63765 11.4765 2.63765ZM11.5037 6.08434C8.90604 6.08434 6.58203 7.76676 5.70703 10.2484C5.57031 10.6068 5.76161 11.0477 6.14442 11.158C6.22646 11.1856 6.30859 11.2134 6.39062 11.2134C6.69141 11.2134 6.96484 11.0202 7.07422 10.7169C7.73047 8.81434 9.53494 7.51849 11.5037 7.51849C11.8865 7.51849 12.2151 7.18771 12.2151 6.80168C12.2151 6.41565 11.8865 6.08434 11.5037 6.08434ZM6.30838 12.8953C5.92557 12.8953 5.59755 13.1985 5.59755 13.6121V13.7225C5.62489 14.1086 5.92599 14.4393 6.33615 14.4393C6.71896 14.4393 7.04698 14.1086 7.04698 13.7225V13.6396C7.04698 13.226 6.74631 12.8953 6.33615 12.8953H6.30838ZM21.6487 21.6359L25.4218 25.4962L24.383 26.5442L20.6094 22.6839L21.6487 21.6359Z" fill="#572222"/>
+                <svg class="lupa-pesquisa" width="28" height="29" viewBox="0 0 28 29" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.4765 0.955772C5.32411 0.955772 0.320526 6.0572 0.320526 12.3164C0.320526 18.6032 5.32411 23.6765 11.4765 23.6765C14.2929 23.6765 16.8633 22.6009 18.832 20.8362L19.4612 21.4706L18.8865 22.077C18.5584 22.4079 18.5584 22.932 18.8865 23.2629L23.8084 28.281C23.9724 28.4465 24.1643 28.5293 24.383 28.5293C24.6018 28.5293 24.8204 28.4465 24.9571 28.281L27.1446 26.0477C27.4454 25.7168 27.4455 25.1931 27.1174 24.8898L22.1955 19.8711C22.0315 19.7057 21.8396 19.6234 21.6209 19.6234C21.4021 19.6234 21.1835 19.7057 21.0468 19.8711L20.4727 20.478L19.8435 19.8162C21.5662 17.8033 22.6329 15.184 22.6329 12.3164C22.6329 6.0572 17.6288 0.955772 11.4765 0.955772ZM11.4765 2.63765C16.7265 2.63765 20.9923 6.99459 20.9923 12.3439C20.9923 17.6931 16.7265 22.0221 11.4765 22.0221C6.22646 22.0221 1.96115 17.6931 1.96115 12.3439C1.96115 6.99459 6.22646 2.63765 11.4765 2.63765ZM11.5037 6.08434C8.90604 6.08434 6.58203 7.76676 5.70703 10.2484C5.57031 10.6068 5.76161 11.0477 6.14442 11.158C6.22646 11.1856 6.30859 11.2134 6.39062 11.2134C6.69141 11.2134 6.96484 11.0202 7.07422 10.7169C7.73047 8.81434 9.53494 7.51849 11.5037 7.51849C11.8865 7.51849 12.2151 7.18771 12.2151 6.80168C12.2151 6.41565 11.8865 6.08434 11.5037 6.08434ZM6.30838 12.8953C5.92557 12.8953 5.59755 13.1985 5.59755 13.6121V13.7225C5.62489 14.1086 5.92599 14.4393 6.33615 14.4393C6.71896 14.4393 7.04698 14.1086 7.04698 13.7225V13.6396C7.04698 13.226 6.74631 12.8953 6.33615 12.8953H6.30838ZM21.6487 21.6359L25.4218 25.4962L24.383 26.5442L20.6094 22.6839L21.6487 21.6359Z"
+                        fill="#572222" />
                 </svg>
             </div>
 
@@ -145,7 +155,7 @@
             </textarea>
         </div>
     </main>
-    <footer>Vitoria Azevedo  |  A paz de Deus!</footer>
+    <footer>Vitoria Azevedo | A paz de Deus!</footer>
 </body>
 
 </html>

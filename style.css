@@ -19,7 +19,7 @@ body{
 }
 
 body.change{
-    opacity: 0.3;
+    /* opacity: 0.3; */
     transition: .4s all ease-in-out;
 }
 
@@ -68,7 +68,6 @@ header{
 
 .menu.active{
     transform: translateX(0);
-    /* opacity: 1; */
 }
 
 .menu ul li{
@@ -79,6 +78,21 @@ header{
     width: 100%;
 }
 
+.menu span{
+    cursor: pointer;
+}
+
+.sub-menu{
+    font-size: 1.2rem;
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.sub-menu.show{
+    visibility: visible;
+}
 
 
 main{
