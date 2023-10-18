@@ -26,3 +26,15 @@
 
 
 » Responsividade ✔
+
+
+# Funcionalidades ✨
+
+
+» Gerar versículo aleatório ✔
+
+
+» Buscar por livro da bíblia (retorna os detalhes do livro informado) ✔
+
+
+» Buscar capítulo de um livro específico -> Em desenvolvimento
