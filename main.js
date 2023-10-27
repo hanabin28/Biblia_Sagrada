@@ -85,7 +85,6 @@ const inputPesquisarCapitulo = document.getElementById('capitulo')
 
 const getChapter = async function (chapter) {
     const url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapter}/${chapter}`
-    chapter.split("", 2)
     const response = await fetch(url)
     const returnChapter = await response.json()
     console.log(returnChapter)
