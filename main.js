@@ -81,22 +81,22 @@ inputPesquisar.addEventListener('keypress', (event) => {
 
 
 /** Pesquisa - livro + capítulo **/
-const inputPesquisarCapitulo = document.getElementById('capitulo')
-
 const getChapter = async function (chapter) {
-    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapter}/${chapter}`
-    const response = await fetch(url)
-    const returnChapter = await response.json()
-    console.log(returnChapter)
-    return returnChapter
+    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapter}/${chapter}`;
+    const response = await fetch(url);
+    const returnChapter = await response.json();
+    return returnChapter; 
 }
 
 const showChapter = async function () {
-    const showChapter = document.getElementById('aparecer-versiculo')
-    const chapter = await getChapter(inputPesquisarCapitulo.value)
+    const inputPesquisarCapitulo = document.getElementById('capitulo').value;
+    const showChapterElement = document.getElementById('aparecer-versiculo');
+    
+    const chapter = await getChapter(inputPesquisarCapitulo);
 
-    showChapter.value = chapter.book.name
-
+    showChapterElement.value = chapter.book.name;
 }
 
-inputPesquisarCapitulo.addEventListener('blur', showChapter)
+const inputPesquisarCapitulo = document.getElementById('capitulo');
+
+inputPesquisarCapitulo.addEventListener('blur', showChapter);
