@@ -21,14 +21,14 @@ openMenuBtn.addEventListener('click', openMenu)
 closeMenuBtn.addEventListener('click', closeMenu)
 
 /** Menu - dropdown **/
-const dropdown = document.getElementById('dropdown')
-const subMenu = document.getElementById('sub-menu')
+// const dropdown = document.getElementById('dropdown')
+// const subMenu = document.getElementById('sub-menu')
 
-const openSubMenu = function () {
-    subMenu.classList.add('show')
-}
+// const openSubMenu = function () {
+//     subMenu.classList.add('show')
+// }
 
-dropdown.addEventListener('click', openSubMenu)
+// dropdown.addEventListener('click', openSubMenu)
 
 /**   **/
 
@@ -82,7 +82,8 @@ inputPesquisar.addEventListener('keypress', (event) => {
 
 /** Pesquisa - livro + capítulo **/
 const getChapter = async function (chapter) {
-    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${chapter}/${chapter}`;
+    const gChapter = chapter.split(" ", 2);
+    const url = `https://www.abibliadigital.com.br/api/verses/nvi/${gChapter[0]}/${gChapter[1]}`;
     const response = await fetch(url);
     const returnChapter = await response.json();
     return returnChapter; 
@@ -93,10 +94,15 @@ const showChapter = async function () {
     const showChapterElement = document.getElementById('aparecer-versiculo');
     
     const chapter = await getChapter(inputPesquisarCapitulo);
-
-    showChapterElement.value = chapter.book.name;
+    showChapterElement.value = `Livro: ${chapter.book.name}\n Capítulo: ${chapter.chapter.number}\n`;
 }
 
 const inputPesquisarCapitulo = document.getElementById('capitulo');
 
-inputPesquisarCapitulo.addEventListener('blur', showChapter);
+inputPesquisarCapitulo.addEventListener('keypress', (event) => {
+    if (event.code === 'Enter') {
+        showChapter()
+    }
+})
+
+// inputPesquisarCapitulo.addEventListener('blur', showChapter);
