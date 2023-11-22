@@ -90,17 +90,18 @@ const getChapter = async function (chapter) {
 }
 
 const showChapter = async function () {
-    const inputPesquisarCapitulo = document.getElementById('capitulo').value;
-    const showChapterElement = document.getElementById('aparecer-versiculo');
+    const inputPesquisarCapitulo = document.getElementById('capitulo').value
+    const showChapterElement = document.getElementById('aparecer-versiculo')
     
-    const chapter = await getChapter(inputPesquisarCapitulo);
+    const chapter = await getChapter(inputPesquisarCapitulo)
     showChapterElement.value = `Livro: ${chapter.book.name}\n Capítulo: ${chapter.chapter.number}\n ${chapter.verses.forEach(texto => {
+        showChapterElement.value = `Versículo: ${texto.number}`
         console.log(texto.number)
         console.log(texto.text)
-    })}`;
+    })}`
 }
 
-const inputPesquisarCapitulo = document.getElementById('capitulo');
+const inputPesquisarCapitulo = document.getElementById('capitulo')
 
 inputPesquisarCapitulo.addEventListener('keypress', (event) => {
     if (event.code === 'Enter') {
