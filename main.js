@@ -94,7 +94,10 @@ const showChapter = async function () {
     const showChapterElement = document.getElementById('aparecer-versiculo');
     
     const chapter = await getChapter(inputPesquisarCapitulo);
-    showChapterElement.value = `Livro: ${chapter.book.name}\n Capítulo: ${chapter.chapter.number}\n`;
+    showChapterElement.value = `Livro: ${chapter.book.name}\n Capítulo: ${chapter.chapter.number}\n ${chapter.verses.forEach(texto => {
+        console.log(texto.number)
+        console.log(texto.text)
+    })}`;
 }
 
 const inputPesquisarCapitulo = document.getElementById('capitulo');
